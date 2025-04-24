@@ -1,0 +1,15 @@
+<%= simple_form_for(@task, html: { class: "form" }) do |f| %>
+  <div class="mb-3">
+    <%= f.input :title, label: "Title", input_html: { class: "form-control" } %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.input :details, label: "Details", input_html: { class: "form-control" } %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.input :completed, as: :boolean, label: "Completed", wrapper_html: { class: "form-check" }, input_html: { class: "form-check-input" } %>
+  </div>
+
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

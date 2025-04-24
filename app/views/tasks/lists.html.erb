@@ -1,0 +1,22 @@
+<div class="continer">
+  <div class="border-bottom p-3">
+    <h1>My tasks</h1>
+  </div>
+
+  <div class="border-bottom p-3">
+    <ul class="list-unstyled">
+        <% @tasks.each do |task| %>
+          <li class="form-checker">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              <%= link_to task.title, task_path(task) %>
+            </label>
+          </li>
+        <% end %>
+    </ul>
+  </div>
+
+  <div class="border-bottom p-3">
+    <%= link_to 'Add a new task', tasks_new_path%>
+  </div>
+</div>
